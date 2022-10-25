@@ -1,0 +1,106 @@
+.container {
+    margin: 1.5rem;
+    max-width: 22rem;
+    width: -webkit-fill-available;
+    width: fill-available;
+    min-height: 20.41rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    background: radial-gradient(
+        farthest-side at top center,
+        hsl(215deg 17% 15%), 
+        hsl(215deg, 27%, 12%)
+    );
+    
+    @include media-breakpoint-up($screen-sm) {
+        border-radius: 2rem;
+        max-width: 25.89rem;
+        min-height: 25.948rem;
+    }
+}
+
+.card {
+    padding: 1.5rem;
+    height: 100%;
+
+    @include flex(column, center, flex-start);
+    gap: 1rem;
+
+    &__icon {
+        @include center-grid;
+        @include size(2.5rem);
+        border-radius: 50%;
+        background-color: $theme-dark-blue-color;
+    }
+
+    &__text {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    &--hidden {      
+        animation: fadeIn 0.3s ease-in-out reverse forwards;
+    }
+
+    &--show {
+        animation: fadeIn 0.3s ease-in-out forwards;
+    }
+
+    &--top {
+        animation: fadeOutTop 0.3s ease-in-out forwards;
+    }
+    
+    &--center {
+        animation: fadeInCenter 0.3s ease-in-out forwards;
+    }
+
+    &--back {
+        display: none;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        transition: transform $theme-transition;
+    }
+
+    &__thankyou-image {
+        width: 7rem;
+    }
+
+    &__rating-container {
+        color: $theme-orange-color;
+        background-color: $theme-dark-blue-color;
+        display: block;
+        min-height: 2rem;
+        padding-inline: 1rem;
+        border-radius: 2rem;
+
+        @include center-grid;
+    }   
+
+    @include media-breakpoint-up($screen-sm) {
+        padding: 2rem;
+
+        &:not(.card--back) {
+            gap: 1.5rem;
+        }
+        
+        &__icon {
+            @include size(3rem);
+        }
+
+        &__title {
+            margin-top: 0.6rem;
+            margin-bottom: -0.8rem;
+        }
+
+        &__text {
+            font-size: 1rem;
+        }
+
+        &__thankyou-image {
+            width: 9rem;
+        }
+    }
+}

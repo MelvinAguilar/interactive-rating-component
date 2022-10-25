@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+// Font Family
+$theme-text-font: "Overpass", sans-serif;
+
+// Primary colors
+$theme-orange-color: hsl(25, 97%, 53%);
+
+// Neutral colors
+$theme-white-color: hsl(0, 0%, 100%);
+$theme-light-grey-color: hsl(217, 12%, 63%);
+$theme-medium-grey-color: hsl(216, 12%, 54%);
+$theme-dark-blue-color: hsl(213, 19%, 18%);
+$theme-very-dark-color: hsl(216, 12%, 8%);
+
+$theme-dark-grey-color:  hsl(215, 27%, 12%);
+
+// Transition
+$theme-transition: 0.3s ease-in-out;
+
+// Breakpoints
+$screen-sm: 576px; // Large smartphones
+$screen-md: 768px; // Small tablets
+$screen-lg: 992px; // Tablets
+$screen-xl: 1200px; // Desktops
+$screen-xxl: 1440px; // Large desktops
+$screen-rwd: 364px; // Custom device
+
+// Border shadow
+$theme-box-shadow: 0 0.063rem 0.188rem rgba($theme-dark-blue-color, 0.12),
+    0 0.063rem 0.125rem rgba($theme-dark-blue-color, 0.24);
+$theme-box-shadow-hover: 0 0.875rem 1.75rem rgba($theme-dark-blue-color, 0.25), 
+    0 0.625rem 0.625rem rgba($theme-dark-blue-color, 0.22);

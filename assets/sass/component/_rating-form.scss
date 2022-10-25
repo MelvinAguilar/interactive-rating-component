@@ -1,0 +1,67 @@
+.rating-form {
+    width: 100%;
+
+    &__fieldset {
+        @include flex(row, space-evenly);
+        flex-wrap: wrap;    
+        gap: 0.3rem;
+        
+        border: none;
+        margin-bottom: 1.5rem;
+
+        @include media-breakpoint-up($screen-rwd) {
+            justify-content: space-between;
+        }
+        
+    }
+
+    &__label {
+        position: relative;
+        padding-top: 0.313rem;
+
+        @include size(2.5rem);
+        @include center-grid;
+        
+        border-radius: 50%;
+        background-color: $theme-dark-blue-color;
+        color: $theme-light-grey-color;
+        transition: all $theme-transition;
+
+        @include media-breakpoint-up($screen-sm) {      
+            @include size(3.2rem);
+        }
+        cursor: pointer;
+        z-index: 200;
+
+        &:hover, &:focus {
+            background-color: $theme-orange-color;
+            color: $theme-white-color;
+        }
+    }
+
+    &__circle {
+        z-index: 2;
+    }
+
+    // Hide the native radio input
+    &__input {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%);
+        border-radius: 50%;
+        z-index: -1;
+        cursor: pointer;
+        transition: all $theme-transition;
+
+        &:checked {
+            background-color: $theme-medium-grey-color;
+            & + .rating-form__circle {
+                color: $theme-white-color;
+            }
+        }
+    }
+}

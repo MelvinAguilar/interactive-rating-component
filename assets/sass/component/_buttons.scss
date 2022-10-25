@@ -1,0 +1,48 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    @include size(2.5rem);
+    transition: $theme-transition;
+
+    &--primary {
+        width: 100%;
+        border: none;
+        border-radius: 2rem;
+        text-transform: uppercase;
+        background-color: $theme-orange-color;
+        font-size: 0.85rem;
+
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        color: $theme-white-color;
+    }
+    
+    // chaeck all btn desactived
+    // &:disabled {
+    //     opacity: 0.5;
+    //     cursor: default
+    // }
+
+    @include media-hover-effect() {
+        &--primary:not(:disabled):hover {
+            background-color: $theme-white-color;
+            color: $theme-orange-color;
+        }
+    }
+
+
+    .card--back & {
+        font-size: 0.85rem;
+        height: 2rem;
+        
+    }
+
+    @include media-breakpoint-up($screen-sm) {      
+        height: 3.2rem;
+        font-size: 1rem;
+
+        .card--back & {
+            height: 3.2rem;
+        }
+    }
+}

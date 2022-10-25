@@ -1,0 +1,21 @@
+.attribution {
+    margin-top: 0.5rem;
+    font-size: 0.735rem;
+    text-align: center;
+
+    a {
+        color: $theme-orange-color;
+    }
+
+    @include media-double-breakpoint-up($screen-sm, min-width, 540px, min-height) {
+        position: fixed;
+        bottom: 0.325rem;
+        width: 100%;
+    }
+
+    @include media-hover-effect() {
+        & a:hover  {
+            color: darken($theme-orange-color, 20);
+        }
+    }
+}

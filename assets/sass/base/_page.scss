@@ -1,0 +1,10 @@
+body {
+    font-family: $theme-text-font;
+    font-size: 0.938rem;
+    color: $theme-light-grey-color;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $theme-very-dark-color;
+
+    @include flex;
+}

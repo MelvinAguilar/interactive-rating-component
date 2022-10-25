@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: $theme-white-color;
+}
+
+h2 {
+    font-size: 1.4rem;
+
+    @include media-breakpoint-up($screen-sm) {
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,47 @@
+@mixin flex ($direction: column, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin center-grid () {
+    display: grid;
+    place-content: center;
+}
+
+@mixin img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@mixin size ($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font-style ($font-size, $font-weight: 400, $line-height: $theme-line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+// Media query
+@mixin media-breakpoint-up ($breakpoint, $direction: min-width) {
+    @media screen and ($direction: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin media-double-breakpoint-up ($break_min, $dir_min: min-width, $break_max, $dir_max: max-width) {
+    @media screen and ($dir_min: $break_min) and ($dir_max: $break_max) {
+        @content;
+    }
+}
+
+@mixin media-hover-effect () {
+    @media (hover: hover) {
+        @content;
+    }
+}
