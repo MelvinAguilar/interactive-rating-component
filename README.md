@@ -4,6 +4,13 @@
 
 This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+<h2 align="center">Links</h2>
+
+- Solution URL: [Interactive Rating Component (SASS + JS + Mobile-first + BEM) | Frontend Mentor](https://www.frontendmentor.io/solutions/interactive-rating-component-sass-mobilefirst-bem-UuMjrX1kb0)
+- Live Site URL: [https://interactive-rating-component-melvinhdz.vercel.app/](https://interactive-rating-component-melvinhdz.vercel.app/)
+
+<br>
+
 ## Table of contents
 
 - [Overview](#overview)
