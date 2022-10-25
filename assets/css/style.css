@@ -246,6 +246,10 @@ body {
   letter-spacing: 0.1rem;
   color: hsl(0deg, 0%, 100%);
 }
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
 @media (hover: hover) {
   .btn--primary:not(:disabled):hover {
     background-color: hsl(0deg, 0%, 100%);

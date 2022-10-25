@@ -18,10 +18,10 @@
     }
     
     // chaeck all btn desactived
-    // &:disabled {
-    //     opacity: 0.5;
-    //     cursor: default
-    // }
+    &:disabled {
+        opacity: 0.5;
+        cursor: default
+    }
 
     @include media-hover-effect() {
         &--primary:not(:disabled):hover {

@@ -23,7 +23,6 @@ const setFormListeners = () => {
     ratingInputs.forEach(input => {
         input.addEventListener('change', () => {
             ratingSubmit.disabled = false;
-            console.log('Rating clicked');
         });
     });
 
